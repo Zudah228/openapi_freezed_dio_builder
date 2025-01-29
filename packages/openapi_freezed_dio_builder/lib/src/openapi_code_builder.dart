@@ -715,12 +715,7 @@ class OpenApiLibraryGenerator {
           return _apiUuid;
         }
         if (schema.format == 'binary') {
-          // TODO restrict to requests
-          if (parent.toLowerCase().contains('add')) {
-            return _dioMultipartFile;
-          } else {
-            return _dioResponseBody;
-          }
+          return _dioMultipartFile;
         }
         return _typeString;
       case APIType.number:
